@@ -55,20 +55,5 @@ a0 = (1/m)*sumyi - a1*(1/m)*sumxi;
 % ***************************************
 a0 = exp(a0);
 
-%a0 a1 ... am
-cases = [a0 a1];
-n = 1;
-ri = zeros(n,m);
-
-% ***************************************
-% format: cases(i, 1) ...cases(i,n) = a0 to an
-% x => xi(j)
-% ri = yi(j) - (function)
-% Residuals calculation
-for i = 1:n
-    for j = 1:m
-        ri(i,j) = yi(j) - (log(cases(i,1)) + (xi(j).^2)*log(a1));
-    end
-end
 a0
 a1
