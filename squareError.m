@@ -24,7 +24,7 @@ ri = zeros(n,m);
 % Residuals calculation
 for i = 1:n
     for j = 1:m
-        ri(i,j) = (cases(i, 1) + cases(i, 2).*xi(j)) - yi(j);
+        ri(i,j) = (cases(i, 1) + cases(i, 2)*xi(j)) - yi(j);
     end
 end
 
