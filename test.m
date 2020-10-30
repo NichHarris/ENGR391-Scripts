@@ -14,8 +14,10 @@ m = length(xi);
 A = [xi.^0 sin(2*pi.*xi) cos(2*pi.*xi)];
 yfit = A*((A'*A)\(A'*yi));
 
-r = (A.*yfit) - yi;
-RMSE = norm(r,2)/sqrt(m);
+a2 = (yfit(1) - 16.250 + 3.3192*sin(2*pi*xi(1)))/cos(2*pi*xi(1))
+
+##r = (A*yfit) - yi;
+##RMSE = norm(r,2)/sqrt(m);
 
 hold on
 plot(xi, yi)
