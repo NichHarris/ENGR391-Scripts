@@ -26,7 +26,7 @@ x = 4;
 fx = 3*x^2 - exp(x);
 dfx = 6*x - exp(x);
 
-for i = 0:n
+for i = 0:100
     fx = 3*x^2 - exp(x);
     dfx = 6*x - exp(x);
 	absError = abs(fx/dfx);
