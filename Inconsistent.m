@@ -1,4 +1,6 @@
 % Inconsistent equations
+clc;
+clear;
 
 x=[-2 -1 0 1];
 y=[3 -2 2 4];

@@ -1,4 +1,6 @@
 % for newton interpolation
+clc;
+clear;
 
 function [b] = diff(x1,y1,x2,y2)
   
