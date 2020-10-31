@@ -25,7 +25,11 @@ for i = 1:n
     % Absolute Error
     absError = abs((b-a)/2)
     % Relative Error
-    relError = absError/c
+    relError = abs(absError/c)
+    
+##    if absError <= tolerance
+##      break
+##    end
 end
 
 disp('A and B')

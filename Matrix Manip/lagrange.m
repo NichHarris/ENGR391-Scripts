@@ -3,8 +3,8 @@
 clc;
 clear;
 
-x = [-1; 2; 3];
-y = [2; -1; 4];
+x = [1; 2; 4];
+y = [-6; 2; 12];
 m = length(x);
 
 % script
@@ -16,8 +16,9 @@ for i = 1:m
             L(i) = L(i)./(x(i) - x(j));   
         end
     end
-	% L(i) = y(i)*L(i);
+	  Lyi(i) = y(i)*L(i);
 end
 
 % display lagrange coefficients 
 L
+Lyi

@@ -6,12 +6,25 @@
 clc;
 clear;
 
-r = 2;
-n = 1;
-dfr = 3*r^2 - 8*r - 11;
-ddfr = 6*r - 8;
-error = 0.04;
+r = -1.9;
+x0 = 0;
+error = abs(x0-r);
+##n = 1;
+dfr = 0.1857;
+##ddfr = 6*r - 8;
+tolerance = 0.001
 
-lambda = abs(ddfr/(2*dfr))
+% Fixed Point
+lambda = abs(dfr);
 
-newError = lambda*error^(1+n)
+% Newton
+##lambda = abs(ddfr/(2*dfr));
+
+for i = 1:100
+    interation = i
+    error = lambda*error
+    if error <= tolerance
+      break
+    end
+end
+    

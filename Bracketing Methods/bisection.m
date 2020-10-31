@@ -10,6 +10,8 @@ b = 2;
 % n = interations
 n = 3;
 
+##tolerance = ***;
+
 for i = 0:n
     disp('Iteration: ') disp(i);
 	
@@ -24,11 +26,16 @@ for i = 0:n
     else
         a = c;
     end
-	c
+	  c
     % Absolute Error
     absError = abs((b-a)/2);
     % Relative Error
-    relError = absError/c;
+    relError = abs(absError/c);
+    % in the case where we want a max error below a certain tolerance
+##    if absError <= tolerance
+##      break
+##    end
+    
 end
 disp('A and B and C')
 a

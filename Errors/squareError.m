@@ -9,8 +9,8 @@ clear;
 %and the specific function you are using
 
 % Define matrices
-xi = [-2 0 1 2 3];
-yi = [2.5 1.0 2.5 5.7 11.6];
+xi = [-1 2 3];
+yi = [3 2 1];
 m = length(xi);
 
 %a0 a1 ... am

@@ -23,12 +23,13 @@ clear;
 format long;
 
 x = 4;
+tolerance = 10^-12;
 
 for i = 0:100
     fx = 3*x^2 - exp(x);
     dfx = diff(fx);
-	absError = abs(fx/dfx);
-    if absError <= 10^-12
+	  absError = abs(fx/dfx);
+    if absError <= tolerance
         i
         x
         absError
@@ -38,4 +39,4 @@ for i = 0:100
 end
 
 % Relative Error
-relError = absError/x
+relError = abs(absError/x)

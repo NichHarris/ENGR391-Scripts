@@ -15,6 +15,7 @@ A_tb = A'*y';
 a=A_t\A_tb
 
 n = 1;
+m = length(x);
 ri = zeros(n,m);
 % format: cases(i, 1) ...cases(i,n) = a0 to an
 % x => xi(j)
