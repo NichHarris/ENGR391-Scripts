@@ -11,3 +11,4 @@ fx = 2*xr - 1;
 forward = abs(r-xr)
 backward = abs(fx)
 
+mag = forward/backward;
